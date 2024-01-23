@@ -1,12 +1,12 @@
 body.light-mode {
     background-color: #f8f9fa; /* Light mode background color */
-    background-image: url(light.jpg);
+    background-image: url(/images/bg-light.jpg);
     color: #000; /* Light mode text color */
 }
 
 body.dark-mode {
     background-color: #343a40; /* Dark mode background color */
-    background-image: url(background-maths.jpg);
+    background-image: url(/images/bg-dark.jpg);
     color: #fff; /* Dark mode text color */
 }
 

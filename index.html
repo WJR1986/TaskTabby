@@ -25,9 +25,12 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="theme.css" />
-    <!-- <link rel="stylesheet" href="responsive.css"> -->
+    <!--Youtube API-->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
   </head>
   <body>
     <div class="container mt-5">
@@ -87,13 +90,23 @@
             <div class="col-sm">
               <div class="image-section">
                 <!-- Add your image here -->
-                <img src="pomodoro-still.jpg" alt="Your Image" class="img-fluid" />
+                <img src="images/pomodoro-still.jpg" alt="Your Image" class="img-fluid" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+      <div class="collapsible-heading" onclick="toggleCollapsible()">
+        <span>Lofi/Chill Music</span>
+        <i id="toggleIcon" class="fas fa-plus-circle fa-icon"></i>
+    </div>
+
+    <div id="collapsibleContent" class="collapsible-container">
+      <div class="youtube-video">
+        <div id="player"></div>
+    </div>
+    </div>
+
     <!-- Audio element for the alarm sound -->
     <audio id="alarmSound" src="alarm-sound.mp3" preload="auto"></audio>
 
@@ -102,7 +115,8 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="app.js"></script>
-    <script src="pomodoro.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/pomodoro.js"></script>
+    <script src="js/youtube.js"></script>
   </body>
 </html>

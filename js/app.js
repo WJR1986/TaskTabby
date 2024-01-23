@@ -190,7 +190,7 @@ function toggleTheme() {
     document.body.classList.toggle("dark-mode", isDarkMode);
 
     // Update the background image based on the theme
-    const backgroundImage = isDarkMode ? 'background-maths.jpg' : 'light.jpg';
+    const backgroundImage = isDarkMode ? 'images/bg-dark.jpg' : 'images/bg-light.jpg';
     document.body.style.backgroundImage = `url('${backgroundImage}')`;
 
     // Save the theme preference to local storage
@@ -199,4 +199,30 @@ function toggleTheme() {
 
 function setTheme(isDarkMode) {
     document.body.classList.toggle("dark-mode", isDarkMode);
+}
+
+function toggleCollapsible() {
+    var content = document.getElementById("collapsibleContent");
+    var icon = document.getElementById("toggleIcon");
+
+    if (content.style.display === "none" || content.style.display === "") {
+        // If content is hidden, show it
+        content.style.display = "block";
+        icon.className = "fas fa-minus-circle fa-icon"; // Change the icon to the minus sign
+
+        // If the YouTube player is not initialized, initialize it
+        if (!player) {
+            onYouTubeIframeAPIReady();
+        }
+    } else {
+        // If content is visible, hide it
+        content.style.display = "none";
+        icon.className = "fas fa-plus-circle fa-icon"; // Change the icon to the plus sign
+
+        // If the YouTube player is initialized, destroy it to stop the video and release resources
+        if (player) {
+            player.destroy();
+            player = null; // Set player to null so that it can be reinitialized
+        }
+    }
 }
