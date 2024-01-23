@@ -3,18 +3,6 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-body.light-mode {
-    background-color: #f8f9fa; /* Light mode background color */
-    background-image: url(light.jpg);
-    color: #000; /* Light mode text color */
-}
-
-body.dark-mode {
-    background-color: #343a40; /* Dark mode background color */
-    background-image: url(background-maths.jpg);
-    color: #fff; /* Dark mode text color */
-}
-
 .container {
     max-width: 600px;
     margin: 50px auto;
@@ -23,12 +11,13 @@ body.dark-mode {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     transition: background-color 0.3s;
-    position: relative; /* Added this line */
+    position: relative;
 }
 
 .main-heading {
-    font-family: 'Sevillana', cursive;
-    font-size: 4rem;
+    font-family: 'Space Mono', monospace;
+    text-decoration: underline;
+    font-size: 3rem;
 }
 
 .mb-3 {
@@ -126,7 +115,7 @@ input:checked + .slider:before {
     padding: 10px; /* Add padding for better appearance */
     border: 2px solid #fff; /* Add a border for visibility */
     border-radius: 5px; /* Add border-radius for rounded corners */
-    margin: 10px 0;
+    margin: 10px auto;
     width: fit-content;
 }
 
@@ -145,94 +134,11 @@ input:checked + .slider:before {
     margin-bottom: 5px; /* Reduce vertical spacing between timer buttons */
 }
 
-/* Media query for smaller screens */
-@media (max-width: 576px) {
-    .container {
-        max-width: 100%;
-        margin: 20px auto;
-        padding: 10px;
-    }
-
-    .toggle-theme {
-        flex-direction: column; /* Stack the theme toggle vertically on small screens */
-        align-items: flex-start; /* Align items to the start */
-        margin-bottom: 10px;
-    }
-
-    .input-group {
-        flex-direction: column; /* Stack input elements vertically on small screens */
-    }
-
-    #taskInput,
-    #pomodorosInput {
-        width: 100%; /* Make input boxes full-width on small screens */
-        margin-bottom: 10px; /* Add some bottom margin for spacing */
-    }
-
-    .pomodoro-section {
-        display: flex;
-        flex-direction: column; /* Stack the timer and image vertically on small screens */
-        align-items: start;
-    }
-
-    .timer-section {
-        display: flex;
-        flex-direction: column; /* Stack the timer and buttons vertically on small screens */
-        align-items: start; /* Center items vertically */
-    }
-
-    .timer {
-        flex: 1;
-        margin-right: 0; /* Remove margin between timer and image */
-    }
-
-    .image-section {
-        max-width: 80%; /* Adjust the max-width as needed */
-        margin-left: 0 !important;
-        /* margin-right: auto; Center the image horizontally */
-        margin-top: 10px; /* Adjust top margin for spacing */
-        
-    }
-
-    .image-section img {
-        /* width: 100%; Make the image fill its container */
-        max-width: 200px;
-        max-height: 200px; /* Adjust the max-height as needed */
-        border-radius: 5px; /* Optional: Add border-radius for rounded corners */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for styling */
-
-    }
-    #pauseButton {
-        display: none; /* Hide the Pause button initially */
-    }
-
-    .timer-section button {
-        width: 75%; /* Make timer buttons full-width on small screens */
-        margin-bottom: 10px; /* Add some bottom margin for spacing */
-        margin-right: 0;
-    }
-
-    .theme-label {
-        margin-left: 0;
-    }
-
-    .toggle-theme {
-        display: inline-block;
-
-    }
-
-    .main-heading {
-        margin-top: 5px;
-        margin-bottom: 10px !important;
-    }
-}
-
 /* Additional styling for the image in the image-section */
 .image-section {
     flex-shrink: 0; /* Prevent image section from shrinking */
     max-width: 200px; /* Set a maximum width for the image section */
-    margin-left: auto; /* Align the image to the right within its container */
-    margin-top: 20px; /* Add top margin for better spacing */
+    margin: 10px auto;
 }
 
 /* Ensure image remains responsive */
@@ -278,7 +184,7 @@ input:checked + .slider:before {
 }
 
 /* Shared styles for buttons */
-.task-section button {
+.button-section button {
     width: 100%;
     margin-bottom: 10px;
     border-radius: 8px; /* Add border-radius for rounded corners */
@@ -286,28 +192,21 @@ input:checked + .slider:before {
 
 #addButton {
     border-radius: 5px;
+    margin-right: 10px;
+    width: fit-content;
 }
 
 /* Additional styling for the Add Task button */
-.task-section .btn-primary {
+.button-section .btn-primary {
     background-color: #28a745;
     border-color: #28a745;
     margin-bottom: 20px; /* Adjust the margin-bottom for more space */
 }
 
 /* Additional styling for the input boxes in the Add Task section */
-.task-section .form-control {
-    flex: 1;
+.button-section .form-control {
+    /* flex: 1; */
     border-radius: 8px; /* Add border-radius for rounded corners */
     margin-bottom: 20px; /* Adjust the margin-bottom for more space */
 }
 
-
-/* Media query for smaller screens */
-@media (max-width: 576px) {
-    /* Adjust styles for smaller screens if needed */
-    .task-section .form-control {
-        width: 100%;
-        margin-right: 0;
-    }
-}

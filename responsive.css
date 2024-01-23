@@ -1,0 +1,96 @@
+/* responsive.css */
+/* Media query for smaller screens */
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .toggle-theme {
+        flex-direction: column; /* Stack the theme toggle vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+        margin-bottom: 10px;
+    }
+
+    .input-group {
+        flex-direction: column; /* Stack input elements vertically on small screens */
+    }
+
+    #taskInput,
+    #pomodorosInput {
+        width: 100%; /* Make input boxes full-width on small screens */
+        margin-bottom: 10px; /* Add some bottom margin for spacing */
+    }
+
+    .pomodoro-section {
+        display: flex;
+        flex-direction: column; /* Stack the timer and image vertically on small screens */
+        align-items: start;
+    }
+
+    .timer-section {
+        display: flex;
+        flex-direction: column; /* Stack the timer and buttons vertically on small screens */
+        align-items: start; /* Align items to the start */
+    }
+
+    .timer {
+        flex: 1;
+        margin: 0;
+    }
+
+    .image-section {
+        max-width: 80%; /* Adjust the max-width as needed */
+        margin: 0 !important; /* Adjust margin for spacing */
+        margin-top: 10px !important ; /* Adjust top margin for spacing */
+    }
+
+    .image-section img {
+        max-width: 100%; /* Make the image fill its container */
+        max-height: 200px; /* Adjust the max-height as needed */
+        border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for styling */
+        
+    }
+
+    #pauseButton {
+        display: none; /* Hide the Pause button initially */
+    }
+
+    .timer-section button {
+        width: 100% !important; /* Make timer buttons full-width on small screens */
+        margin-bottom: 10px; /* Add some bottom margin for spacing */
+        margin-right: 0;
+    }
+
+    .theme-label {
+        margin-left: 0;
+    }
+
+    .toggle-theme {
+        display: inline-block;
+    }
+
+    .main-heading {
+        margin-top: 5px;
+        margin-bottom: 10px !important;
+    }
+
+    .timer-section-small{
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: left;
+    }
+
+    .timer-section-small .col-sm{
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: left;
+    }
+
+    .button-section .form-control {
+        width: 100%;
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,21 @@
+body.light-mode {
+    background-color: #f8f9fa; /* Light mode background color */
+    background-image: url(light.jpg);
+    color: #000; /* Light mode text color */
+}
+
+body.dark-mode {
+    background-color: #343a40; /* Dark mode background color */
+    background-image: url(background-maths.jpg);
+    color: #fff; /* Dark mode text color */
+}
+
+.container {
+    background-color: lightgray; /* Default container background color */
+    transition: background-color 0.3s;
+}
+
+.dark-mode .container {
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}

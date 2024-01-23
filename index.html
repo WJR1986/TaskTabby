@@ -15,12 +15,9 @@
       referrerpolicy="no-referrer"
     />
     <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     <!--Bootstrap CSS CDN-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -29,6 +26,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <!-- <link rel="stylesheet" href="responsive.css"> -->
   </head>
   <body>
     <div class="container mt-5">
@@ -71,42 +70,30 @@
       <!-- Pomodoro Timer Section -->
       <div class="pomodoro-section mt-3">
         <div class="timer-section">
-          <h2>Pomodoro Timer</h2>
-          <button class="btn btn-success" onclick="startTimer(25, 'pomodoro')">
-            Pomodoro
-          </button>
-          <button
-            class="btn btn-info longBreak"
-            onclick="startTimer(15, 'longBreak')"
-          >
-            Long Break
-          </button>
-          <button class="btn btn-warning" onclick="startTimer(5, 'shortBreak')">
-            Short Break
-          </button>
-          <button
-            class="btn btn-secondary"
-            id="pauseButton"
-            onclick="pauseTimer()"
-          >
-            Pause
-          </button>
-          <!-- <button
-            class="btn btn-info testBreak"
-            onclick="startTimer(1, 'testBreak')"
-          >
-            Test Break
-          </button> -->
-          <div id="timer" class="timer">
-            <span id="minutes">25</span>:<span id="seconds">00</span>
+          <h2 class="text-left">Pomodoro Timer</h2>
+          <div class="d-flex flex-column align-items-left gap-2">
+            <button class="btn btn-success" onclick="startTimer(25, 'pomodoro')">Pomodoro</button>
+            <button class="btn btn-info longBreak" onclick="startTimer(15, 'longBreak')">Long Break</button>
+            <button class="btn btn-warning" onclick="startTimer(5, 'shortBreak')">Short Break</button>
+            <button class="btn btn-secondary" id="pauseButton" onclick="pauseTimer()">Pause</button>
+          </div>
+          
+          <div class="row justify-content-center align-items-center p-2 m-2 timer-section-small">
+            <div class="col-sm">
+              <div id="timer" class="timer text-center">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="image-section">
+                <!-- Add your image here -->
+                <img src="pomodoro-still.jpg" alt="Your Image" class="img-fluid" />
+              </div>
+            </div>
           </div>
         </div>
-        <div class="image-section">
-          <!-- Add your image here -->
-          <img src="pomodoro-still.jpg" alt="Your Image" class="img-fluid" />
-        </div>
       </div>
-    </div>
+      
     <!-- Audio element for the alarm sound -->
     <audio id="alarmSound" src="alarm-sound.mp3" preload="auto"></audio>
 
