@@ -4,21 +4,26 @@
     var videoId = 'jfKfPfyJRdk';
 
     var player;
-
     function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-            height: '360', // Set the height of the player
-            width: '640',  // Set the width of the player
-            videoId: videoId,
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
+      // Show the loader when the API is ready and before creating the player
+      document.getElementById('videoLoader').style.display = 'block';
+    
+      player = new YT.Player('player', {
+        height: '360',
+        width: '640',
+        videoId: videoId,
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
     }
-
+    
     function onPlayerReady(event) {
-        // You can do something when the player is ready
+      // Hide the loader when the player is ready
+      document.getElementById('videoLoader').style.display = 'none';
+    
+      // You can do additional actions when the player is ready
     }
 
     function onPlayerStateChange(event) {
