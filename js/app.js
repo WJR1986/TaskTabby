@@ -119,7 +119,7 @@ function renderTasks(tasks) {
         taskItem.setAttribute("data-id", task.id);
 
         const listItem = document.createElement("li");
-        listItem.className = "task-item d-flex flex-wrap align-items-center border border-dark rounded p-2"; // Allow items to wrap onto multiple lines
+        listItem.className = "task-item d-flex flex-wrap align-items-center p-2"; // Allow items to wrap onto multiple lines
         listItem.setAttribute("data-completed", task.completed);
 
         const taskText = document.createElement("span");

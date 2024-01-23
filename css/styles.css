@@ -122,11 +122,14 @@ input:checked + .slider:before {
 .pomodoro-section {
   display: flex;
   align-items: center; /* Vertical centering */
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .timer-section {
   flex: 1; /* Allow timer section to grow and take available space */
-  margin-right: 20px; /* Adjust the margin between timer and image */
+  
 }
 
 /* Add space between timer buttons */
@@ -171,6 +174,10 @@ input:checked + .slider:before {
   text-decoration: line-through;
 }
 
+.task-section{
+    padding: 8px;
+    border-radius: 5px;
+}
 .alarm-icon {
   position: absolute;
   top: 10px;
