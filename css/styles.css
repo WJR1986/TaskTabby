@@ -110,7 +110,7 @@ input:checked + .slider:before {
 }
 
 .timer {
-  font-size: 2rem; /* Adjust the font size for the timer */
+  font-size: 3rem; /* Adjust the font size for the timer */
   font-weight: bold;
   padding: 10px; /* Add padding for better appearance */
   border: 2px solid #fff; /* Add a border for visibility */
