@@ -124,10 +124,10 @@ function renderTasks(tasks) {
 
         const taskText = document.createElement("span");
         taskText.className = "task-text"; // Remove the fixed width
-        taskText.textContent = `${task.text} - Pomodoros: ${task.pomodoros}`;
+        taskText.textContent = `${task.text} (${task.pomodoros} Pomodoros)`;
 
         const buttonContainer = document.createElement("div");
-        buttonContainer.className = "ml-2 mt-2 mt-md-0"; // Add mt-md-0 to remove top margin on larger screens
+        buttonContainer.className = "ml-2 mt-md-0";
 
         const completeButton = document.createElement("i");
         completeButton.className = "fa-regular fa-circle-check custom-icon m-2"; // Add custom class for styling
