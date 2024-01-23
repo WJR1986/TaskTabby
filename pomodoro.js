@@ -25,12 +25,9 @@ function setImage(src) {
     }
 }
 
+// Consolidate setImage and updateImageSource into a single function
 function updateImageSource(src) {
-    // Update the source
-    imageElement.src = src;
-
-    // Additional logic if needed
-    console.log("Image loaded. Updating source.");
+    setImage(src);
 }
 
 function preloadImage(timerType) {
@@ -130,7 +127,7 @@ function getImageSource(timerType) {
     return "pomodoro-running.gif";
 }
 
-function pauseTimer() {
+function pauseTimer(duration) {
     isPaused = !isPaused;
 
     // Update the image immediately based on the current timer state
@@ -168,6 +165,7 @@ function pauseTimer() {
     }
 }
 
+
 function getPausedImageSource(timerType) {
     // Return the appropriate image source when the timer is paused
     if (timerType === "pomodoro") {
@@ -180,9 +178,10 @@ function getPausedImageSource(timerType) {
         return "short-still.jpg";
     }
     else {
-        return "cat-relaxing.jpg"; // Image when Short Break, Long Break, or Test Break is paused
+        return "cat-relaxing.gif"; // Fix the image name
     }
 }
+
 
 function decrementTimer() {
     if (seconds > 0) {

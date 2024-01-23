@@ -119,7 +119,7 @@ function renderTasks(tasks) {
         taskItem.setAttribute("data-id", task.id);
 
         const listItem = document.createElement("li");
-        listItem.className = "task-item d-flex flex-wrap align-items-center"; // Allow items to wrap onto multiple lines
+        listItem.className = "task-item d-flex flex-wrap align-items-center border border-dark rounded p-2"; // Allow items to wrap onto multiple lines
         listItem.setAttribute("data-completed", task.completed);
 
         const taskText = document.createElement("span");
@@ -130,7 +130,7 @@ function renderTasks(tasks) {
         buttonContainer.className = "ml-2 mt-2 mt-md-0"; // Add mt-md-0 to remove top margin on larger screens
 
         const completeButton = document.createElement("i");
-        completeButton.className = "fa-regular fa-circle-check custom-icon"; // Add custom class for styling
+        completeButton.className = "fa-regular fa-circle-check custom-icon m-2"; // Add custom class for styling
         completeButton.onclick = () => toggleCompletion(task.id);
 
         const removeButton = document.createElement("i");

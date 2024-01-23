@@ -44,7 +44,7 @@
         <span class="theme-label">Toggle Dark Mode</span>
       </div>
       <h1 class="mb-4 main-heading">TaskTabby</h1>
-      <div class="mb-3 button-section">
+      <div class="mb-3 task-section">
         <label for="taskInput" class="form-label">Add Task:</label>
         <div class="input-group">
           <input
@@ -75,14 +75,14 @@
           <button class="btn btn-success" onclick="startTimer(25, 'pomodoro')">
             Pomodoro
           </button>
-          <button class="btn btn-warning" onclick="startTimer(5, 'shortBreak')">
-            Short Break
-          </button>
           <button
             class="btn btn-info longBreak"
             onclick="startTimer(15, 'longBreak')"
           >
             Long Break
+          </button>
+          <button class="btn btn-warning" onclick="startTimer(5, 'shortBreak')">
+            Short Break
           </button>
           <button
             class="btn btn-secondary"

@@ -278,7 +278,7 @@ input:checked + .slider:before {
 }
 
 /* Shared styles for buttons */
-.button-section button {
+.task-section button {
     width: 100%;
     margin-bottom: 10px;
     border-radius: 8px; /* Add border-radius for rounded corners */
@@ -289,14 +289,14 @@ input:checked + .slider:before {
 }
 
 /* Additional styling for the Add Task button */
-.button-section .btn-primary {
+.task-section .btn-primary {
     background-color: #28a745;
     border-color: #28a745;
     margin-bottom: 20px; /* Adjust the margin-bottom for more space */
 }
 
 /* Additional styling for the input boxes in the Add Task section */
-.button-section .form-control {
+.task-section .form-control {
     flex: 1;
     border-radius: 8px; /* Add border-radius for rounded corners */
     margin-bottom: 20px; /* Adjust the margin-bottom for more space */
@@ -306,7 +306,7 @@ input:checked + .slider:before {
 /* Media query for smaller screens */
 @media (max-width: 576px) {
     /* Adjust styles for smaller screens if needed */
-    .button-section .form-control {
+    .task-section .form-control {
         width: 100%;
         margin-right: 0;
     }
